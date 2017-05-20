@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>WHEEL REBUILDER Beta v0.1</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/Users/davidk/Desktop/wheelrebuilder/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- <script type="text/javascript" src="/Users/davidk/Desktop/wheelrebuilder/controller.js"></script> -->
+    <script type="text/javascript" src="./controller.js"></script>
+  </head>
+  <body>
+    <h1>WHEEL REBUILDER</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    This application was created by David Ko with: Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron<script>document.write(process.versions.electron)</script>.
+
+    <h2>
+      Enter your original wheel sizes:
+    </h2>
+
+    <form name="original">
+      Wheel Diameter:<br>
+      <input type="number" name="diameter"><br>
+      Wheel Width:<br>
+      <input type="number" name="width"><br>
+      Wheel Offset:<br>
+      <input type="number" name="offset"><br>
+      Lip Size:<br>
+      <input type="number" name="lipsize"><br>
+      Barrel Size:<br>
+      <input type="number" name="barrelsize"><br>
+
+    <h2>
+      Enter your desired lip and barrel size:<br>
+    </h2>
+
+      Desired lip Size:<br>
+      <input type="number" name="desired_lipsize"><br>
+      Desired barrel Size:<br>
+      <input type="number" name="desired_barrelsize"><br>
+      
+        <button class="rebuildButton" type="button" onclick="calculate(original)" style="">Rebuild</button>
+
+    </form>
+
+    <p>
+      <h2>
+        <span id="newSpecTitle"></span><br>
+      </h2>
+
+      <span id="fullSpec"></span><br>
+
+      <span id="newWidth"></span><br>
+
+      <span id="newOffset"></span><br>
+
+      <span id="newLipsize"></span><br>
+
+      <span id="newBarrelsize"></span><br>
+    </p>
+
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+
+
+</html>
