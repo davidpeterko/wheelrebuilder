@@ -15,11 +15,6 @@
         var newOffset;
         var tempOffset;
 
-        // Debug
-        //alert("the values: " + " " + oldWidth + " " + oldOffset + " " + oldLipsize + " " + oldBarrelsize + " ");
-
-        // Need to check if we get into the offset section
-
         // Barrel calculation
         if(oldBarrelsize > desiredBarrelsize)
         {
