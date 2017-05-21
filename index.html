@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>WHEEL REBUILDER Beta v0.1</title>
     <!-- <link rel="stylesheet" type="text/css" href="/Users/davidk/Desktop/wheelrebuilder/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <!-- <script type="text/javascript" src="/Users/davidk/Desktop/wheelrebuilder/controller.js"></script> -->
-    <script type="text/javascript" src="./controller.js"></script>
+    <script type="text/javascript" src="./js/controller.js"></script>
   </head>
   <body>
     <h1>WHEEL REBUILDER</h1>
@@ -21,26 +21,26 @@
 
     <form name="original">
       Wheel Diameter:<br>
-      <input type="number" name="diameter"><br>
+      <input type="text" name="diameter" onkeyup="verifyNonEmpty()" required><br>
       Wheel Width:<br>
-      <input type="number" name="width"><br>
+      <input type="text" name="width" onkeyup="verifyNonEmpty()" required><br>
       Wheel Offset:<br>
-      <input type="number" name="offset"><br>
+      <input type="text" name="offset" onkeyup="verifyNonEmpty()" required><br>
       Lip Size:<br>
-      <input type="number" name="lipsize"><br>
+      <input type="text" name="lipsize" onkeyup="verifyNonEmpty()" required><br>
       Barrel Size:<br>
-      <input type="number" name="barrelsize"><br>
+      <input type="text" name="barrelsize" onkeyup="verifyNonEmpty()" required><br>
 
     <h2>
       Enter your desired lip and barrel size:<br>
     </h2>
 
       Desired lip Size:<br>
-      <input type="number" name="desired_lipsize"><br>
+      <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty()" required><br>
       Desired barrel Size:<br>
-      <input type="number" name="desired_barrelsize"><br>
+      <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty()" required><br>
       
-        <button class="rebuildButton" type="button" onclick="calculate(original)">Rebuild</button>
+      <button id="rebuildButton" type="button" onclick="calculate(original)" disabled>Rebuild</button>
 
     </form>
 
@@ -60,11 +60,13 @@
       <span id="newBarrelsize"></span><br>
     </p>
 
+
+
   </body>
 
   <script>
     // You can also require other files to run in this process
-    require('./renderer.js')
+    require('./js/renderer.js')
   </script>
 
 
