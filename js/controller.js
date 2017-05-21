@@ -16,7 +16,7 @@
     function calculate(form) {
 
         // Check if text inputs are empty or not, terminate if so        
-        if(form.diameter.value == '' || form.width.value == '' || form.offset.value == '' || form.lipsize.value == '' || form.barrelsize.value == '' || form.desired_lipsize == '' || form.desired_barrelsize == '')
+        if(form.diameter.value.length == 0 || form.width.value.length == 0 || form.offset.value.length == 0 || form.lipsize.value.length == 0 || form.barrelsize.value.length == 0 || form.desired_lipsize.value.length == 0 || form.desired_barrelsize.length == 0)
         {
             alert("One or more fields is empty, please enter a valid numerical value.");
             return;
