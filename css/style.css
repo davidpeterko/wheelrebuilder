@@ -14,14 +14,14 @@ html {
 	padding: 0;
 	}
 body { 
-	/* background-color: #f2f2f2;  */
+    /* background-color: #f2f2f2;  */
     background-color: #e8e8fc;  
-	font: 75% georgia, sans-serif;
+    font: 75% georgia, sans-serif;
     line-height: 24px;
-	color: #535759; 
-	margin: 0; 
+    color: #535759; 
+    margin: 0; 
     margin-left: centered;
-	padding: 0;
+    padding: 0;
     text-align: center;
 	}
 p { 
@@ -53,6 +53,6 @@ h2{
 .footer
 {
     position: fixed;
-	text-align: center;
+    text-align: center;
     width: 100%;
 }
