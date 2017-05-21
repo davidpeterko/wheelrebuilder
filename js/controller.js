@@ -2,7 +2,7 @@
 
     // Disable or enable button based on text field input empty or non empty
     function verifyNonEmpty(){
-        if(this.value == '') { 
+        if(this.value.length == 0) { 
             document.getElementById('rebuildButton').disabled = true; 
         } else { 
             document.getElementById('rebuildButton').disabled = false;
