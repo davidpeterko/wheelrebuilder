@@ -5,13 +5,10 @@ Wheel Rebuilder Controller Functions
 */
     // Disable or enable button based on text field input empty or non empty
     function verifyNonEmpty(form){
-        var diaVal = form.diameter.value;
-        var oldWidthVal = form.width.value;
-        var oldOffsetVal = form.offset.value;
-        var oldLipsizeVal = form.lipsize.value;
-        var oldBarrelsizeVal = form.barrelsize.value;
-        var desiredLipsizeVal = form.desired_lipsize.value;
-        var desiredBarrelsizeVal = form.desired_barrelsize.value;
+        var diaVal = form.diameter.value, oldWidthVal = form.width.value,
+        oldOffsetVal = form.offset.value, oldLipsizeVal = form.lipsize.value,
+        oldBarrelsizeVal = form.barrelsize.value,desiredLipsizeVal = form.desired_lipsize.value,
+        desiredBarrelsizeVal = form.desired_barrelsize.value;
 
         // Check if value in textbox is empty string, 0, or null
         if(diaVal == "" || diaVal.length == 0 || diaVal == null
@@ -29,7 +26,6 @@ Wheel Rebuilder Controller Functions
 
     // Calculate takes in the form, verifies the values in the form, and then calculates the new wheels specs. 
     function calculate(form) {
-
         // Check if text inputs are empty or not, terminate if so        
         if(form.diameter.value.length == 0 || form.width.value.length == 0 || form.offset.value.length == 0 
         || form.lipsize.value.length == 0 || form.barrelsize.value.length == 0 || form.desired_lipsize.value.length == 0 
