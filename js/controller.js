@@ -1,46 +1,60 @@
-// this will control all the button functions
+/* 
 
+Wheel Rebuilder Controller Functions
+
+*/
     // Disable or enable button based on text field input empty or non empty
-    function verifyNonEmpty(){
-        if(this.value == '') { 
-            document.getElementById('rebuildButton').disabled = true; 
+    function verifyNonEmpty(form){
+        var diaVal = form.diameter.value;
+        var oldWidthVal = form.width.value;
+        var oldOffsetVal = form.offset.value;
+        var oldLipsizeVal = form.lipsize.value;
+        var oldBarrelsizeVal = form.barrelsize.value;
+        var desiredLipsizeVal = form.desired_lipsize.value;
+        var desiredBarrelsizeVal = form.desired_barrelsize.value;
+
+        // Check if value in textbox is empty string, 0, or null
+        if(diaVal == "" || diaVal.length == 0 || diaVal == null
+        || oldWidthVal == "" || oldWidthVal.length == 0 || oldWidthVal == null
+        || oldOffsetVal == "" || oldOffsetVal.length == 0 || oldOffsetVal == null
+        || oldLipsizeVal == "" || oldLipsizeVal.length == 0 || oldLipsizeVal == null
+        || oldBarrelsizeVal == "" || oldBarrelsizeVal.length == 0 || oldBarrelsizeVal == null
+        || desiredLipsizeVal == "" || desiredLipsizeVal.length == 0 || desiredLipsizeVal == null
+        || desiredBarrelsizeVal == "" || desiredBarrelsizeVal.length == 0 || desiredBarrelsizeVal == null ) { 
+            document.getElementById('rebuildButton').disabled = true
         } else { 
             document.getElementById('rebuildButton').disabled = false;
         }
     }
 
-    // Calculate takes in the form, verifies the values in the form, and then 
-    // calculates the new wheels specs. 
-    // Parameters: form
-    // Must contains all valid and non null inputs
+    // Calculate takes in the form, verifies the values in the form, and then calculates the new wheels specs. 
     function calculate(form) {
 
         // Check if text inputs are empty or not, terminate if so        
-        if(form.diameter.value.length == 0 || form.width.value.length == 0 || form.offset.value.length == 0 || form.lipsize.value.length == 0 || form.barrelsize.value.length == 0 || form.desired_lipsize.value.length == 0 || form.desired_barrelsize.length == 0)
+        if(form.diameter.value.length == 0 || form.width.value.length == 0 || form.offset.value.length == 0 
+        || form.lipsize.value.length == 0 || form.barrelsize.value.length == 0 || form.desired_lipsize.value.length == 0 
+        || form.desired_barrelsize.length == 0)
         {
             alert("One or more fields is empty, please enter a valid numerical value.");
             return;
         }
 
         // Check if input is a number
-        if(!isNumber(form.diameter.value) || !isNumber(form.width.value) || !isNumber(form.offset.value) || !isNumber(form.lipsize.value) || !isNumber(form.barrelsize.value) || !isNumber(form.desired_lipsize.value) || !isNumber(form.desired_barrelsize.value))
+        if(!isNumber(form.diameter.value) || !isNumber(form.width.value) || !isNumber(form.offset.value) 
+        || !isNumber(form.lipsize.value) || !isNumber(form.barrelsize.value) || !isNumber(form.desired_lipsize.value) 
+        || !isNumber(form.desired_barrelsize.value))
         {
             alert("One or more fields entered is a non-numerical value.")
             return;
         }
 
-        var constDiameter = parseFloat(form.diameter.value);
-        var oldWidth = parseFloat(form.width.value);
-        var oldOffset = parseFloat(form.offset.value);
-        var oldLipsize = parseFloat(form.lipsize.value);
-        var oldBarrelsize = parseFloat(form.barrelsize.value);
-        var desiredLipsize = parseFloat(form.desired_lipsize.value);
-        var desiredBarrelsize = parseFloat(form.desired_barrelsize.value);
-        var newLipsize;
-        var newBarrelsize;
-        var newWidth;
-        var newOffset;
-        var tempOffset;
+        // Form values
+        var constDiameter = parseFloat(form.diameter.value), oldWidth = parseFloat(form.width.value),
+        oldOffset = parseFloat(form.offset.value), oldLipsize = parseFloat(form.lipsize.value),
+        oldBarrelsize = parseFloat(form.barrelsize.value), desiredLipsize = parseFloat(form.desired_lipsize.value),
+        desiredBarrelsize = parseFloat(form.desired_barrelsize.value);
+
+        var newLipsize, newBarrelsize, newWidth, newOffset, tempOffset;
 
         // Barrel calculation
         if(oldBarrelsize > desiredBarrelsize)

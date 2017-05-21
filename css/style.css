@@ -40,8 +40,8 @@ h2{
     margin-top: 20px;
     margin-bottom: 10px;
     width: 100px;
-    background-color: white;
-    color: #6d9387;
+    background-color: #20333a;
+    color: #96e8ad;
     padding: 10px;
     border: 1px solid black;
     border-radius: 2px;
@@ -50,9 +50,13 @@ h2{
     font-weight: bold;
 	cursor: pointer;
 	}
-.footer
-{
+#rebuildButton:disabled{
+    opacity: 0.3;
+    }
+.footer{
+    font-style: italic;
+    line-height: 18px;
     position: fixed;
     text-align: center;
     width: 100%;
-}
+    }
