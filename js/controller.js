@@ -26,7 +26,8 @@ Wheel Rebuilder Controller Functions
 
     // Calculate takes in the form, verifies the values in the form, and then calculates the new wheels specs. 
     function calculate(form) {
-        // Check if text inputs are empty or not, terminate if so        
+        // Check if text inputs are empty or not, terminate if so     
+        // I think this can be removed? Since this is all handled in verifyNonEmpty(form)   
         if(form.diameter.value.length == 0 || form.width.value.length == 0 || form.offset.value.length == 0 
         || form.lipsize.value.length == 0 || form.barrelsize.value.length == 0 || form.desired_lipsize.value.length == 0 
         || form.desired_barrelsize.length == 0)
