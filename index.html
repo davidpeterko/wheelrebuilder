@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>WHEEL REBUILDER Beta v0.1</title>
-    <!-- <link rel="stylesheet" type="text/css" href="/Users/davidk/Desktop/wheelrebuilder/style.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!-- <script type="text/javascript" src="/Users/davidk/Desktop/wheelrebuilder/controller.js"></script> -->
-    <script type="text/javascript" src="./js/controller.js"></script>
+    <script type="text/javascript" src="./js/wheelrebuildcontroller.js"></script>
   </head>
   <body>
     <h1>WHEEL REBUILDER</h1>
@@ -21,24 +19,24 @@
 
     <form name="original">
       Wheel Diameter:<br>
-      <input type="text" id="dia_enter" name="diameter" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="diameter" onkeyup="verifyNonEmpty()" required><br>
       Wheel Width:<br>
-      <input type="text" id="width_enter" name="width" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="width" onkeyup="verifyNonEmpty()" required><br>
       Wheel Offset:<br>
-      <input type="text" id="offset_enter" name="offset" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="offset" onkeyup="verifyNonEmpty()" required><br>
       Lip Size:<br>
-      <input type="text" id="lipsize_enter" name="lipsize" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="lipsize" onkeyup="verifyNonEmpty()" required><br>
       Barrel Size:<br>
-      <input type="text" id="barrelsize_enter" name="barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="barrelsize" onkeyup="verifyNonEmpty()" required><br>
 
     <h2>
       Enter your desired lip and barrel size:<br>
     </h2>
 
       Desired lip Size:<br>
-      <input type="text" id="desired_lipsize_enter" name="desired_lipsize" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty()" required><br>
       Desired barrel Size:<br>
-      <input type="text" id="desired_barrelsize_enter" name="desired_barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
+      <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty()" required><br>
       
       <button id="rebuildButton" type="button" onclick="calculate(original)" disabled>Rebuild</button>
 
@@ -64,7 +62,7 @@
       Miscalculations and bugs report to: <a href="mailto:davidpeterko@gmail.com">davidpeterko@gmail.com</a><br>
       Share this with your friends if it helped you<br>
       instagram: <a href="https://www.instagram.com/wutangbrz">@wutangbrz</a><br>
-      <!-- &copy; Copyright -->Last updated: May 21, 2017, WHEEL REBUILDER
+      &copy; Copyright 2017, WHEEL REBUILDER
     </div>
 
   </body>
