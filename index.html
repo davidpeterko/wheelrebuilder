@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>WHEEL REBUILDER Beta v0.1</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script type="text/javascript" src="./js/wheelrebuildcontroller.js"></script>
+    <script type="text/javascript" src="./js/controller.js"></script>
   </head>
   <body>
     <h1>WHEEL REBUILDER</h1>
@@ -19,24 +19,24 @@
 
     <form name="original">
       Wheel Diameter:<br>
-      <input type="text" name="diameter" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="diameter" onkeyup="verifyNonEmpty(original)" required><br>
       Wheel Width:<br>
-      <input type="text" name="width" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="width" onkeyup="verifyNonEmpty(original)" required><br>
       Wheel Offset:<br>
-      <input type="text" name="offset" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="offset" onkeyup="verifyNonEmpty(original)" required><br>
       Lip Size:<br>
-      <input type="text" name="lipsize" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="lipsize" onkeyup="verifyNonEmpty(original)" required><br>
       Barrel Size:<br>
-      <input type="text" name="barrelsize" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
 
     <h2>
       Enter your desired lip and barrel size:<br>
     </h2>
 
       Desired lip Size:<br>
-      <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty(original)" required><br>
       Desired barrel Size:<br>
-      <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty()" required><br>
+      <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
       
       <button id="rebuildButton" type="button" onclick="calculate(original)" disabled>Rebuild</button>
 
