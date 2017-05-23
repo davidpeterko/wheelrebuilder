@@ -3,6 +3,7 @@
 Wheel Rebuilder Controller Functions
 
 */
+
     // Disable or enable button based on text field input empty or non empty
     function verifyNonEmpty(form){
         var diaVal = form.diameter.value, oldWidthVal = form.width.value,
