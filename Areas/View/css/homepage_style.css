@@ -1,0 +1,88 @@
+body { margin-bottom: 50px }
+a { font-family: "Open Sans", sans-serif }
+.container {
+    margin: auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+@font-face {
+    font-family: 'logoFont'; 
+    src: url('fonts/Stya.ttf') format('truetype'),
+         url('fonts/Stya.woff') format('woff'),
+         url('fonts/Stya.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'navFont'; 
+    src: url('fonts/CaviarDreams.ttf') format('truetype'),
+         url('fonts/CaviarDreams.woff') format('woff'),
+         url('fonts/CaviarDreams.woff2') format('woff2');
+}
+
+ /* Navigation */
+.nav-bar {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    background-color: #FFF;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+.group.top-nav { margin-bottom: -20px }
+.group.top-nav nav a { text-decoration: none }
+.group.top-nav nav a:hover { 
+	color: #b8cded; -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+     -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; 
+}
+.nav-bar a.logo,
+.logo {
+    font-family: "logoFont", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    color: #000;
+    letter-spacing: -1px;
+}
+.navigation-toggle .logo {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.top-nav .item-nav li.active a {
+     color: #463254;
+     font-style: italic;
+}
+.top-nav .item-nav li a {
+    font-family: "navFont", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    display: inline;
+
+}
+.intro {
+    width: 100%;
+    height: 900px;
+    padding-top: 50px;
+    background: url(../css/img/riskychan.jpg) #F7F7F7 center;
+    background-position: center 35px;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+}
+
+@-webkit-keyframes smooth-entry{0%{opacity:0;-webkit-transform:translateY(-1.4em)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes smooth-entry{0%{opacity:0;-moz-transform:translateY(-1.4em)}100%{opacity:1;-moz-transform:translateY(0)}}@keyframes smooth-entry{0%{opacity:0;-webkit-transform:translateY(-1.4em);-moz-transform:translateY(-1.4em);-ms-transform:translateY(-1.4em);-o-transform:translateY(-1.4em);transform:translateY(-1.4em)}100%{opacity:1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes smooth-entry-reverse{0%{opacity:0;-webkit-transform:translateY(2em)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes smooth-entry-reverse{0%{opacity:0;-moz-transform:translateY(2em)}100%{opacity:1;-moz-transform:translateY(0)}}@keyframes smooth-entry-reverse{0%{opacity:0;-webkit-transform:translateY(2em);-moz-transform:translateY(2em);-ms-transform:translateY(2em);-o-transform:translateY(2em);transform:translateY(2em)}100%{opacity:1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes smooth-entry-title{0%{opacity:0;-webkit-transform:translateY(-0.6em)}50%{opacity:0;-webkit-transform:translateY(-0.6em)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes smooth-entry-title{0%{opacity:0;-moz-transform:translateY(-0.6em)}50%{opacity:0;-moz-transform:translateY(-0.6em)}100%{opacity:1;-moz-transform:translateY(0)}}@keyframes smooth-entry-title{0%{opacity:0;-webkit-transform:translateY(-0.6em);-moz-transform:translateY(-0.6em);-ms-transform:translateY(-0.6em);-o-transform:translateY(-0.6em);transform:translateY(-0.6em)}50%{opacity:0;-webkit-transform:translateY(-0.6em);-moz-transform:translateY(-0.6em);-ms-transform:translateY(-0.6em);-o-transform:translateY(-0.6em);transform:translateY(-0.6em)}100%{opacity:1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes smooth-entry-btn{0%{opacity:0;-webkit-transform:translateY(0.6em)}70%{opacity:0;-webkit-transform:translateY(0.6em)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes smooth-entry-btn{0%{opacity:0;-moz-transform:translateY(0.6em)}70%{opacity:0;-moz-transform:translateY(0.6em)}100%{opacity:1;-moz-transform:translateY(0)}}@keyframes smooth-entry-btn{0%{opacity:0;-webkit-transform:translateY(0.6em);-moz-transform:translateY(0.6em);-ms-transform:translateY(0.6em);-o-transform:translateY(0.6em);transform:translateY(0.6em)}70%{opacity:0;-webkit-transform:translateY(0.6em);-moz-transform:translateY(0.6em);-ms-transform:translateY(0.6em);-o-transform:translateY(0.6em);transform:translateY(0.6em)}100%{opacity:1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes fof-alien{0%,100%{-webkit-transform:translateY(0)}50%{-webkit-transform:translateY(-30px)}}@-moz-keyframes fof-alien{0%,100%{-moz-transform:translateY(0)}50%{-moz-transform:translateY(-30px)}}@keyframes fof-alien{0%,100%{-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-30px);-moz-transform:translateY(-30px);-ms-transform:translateY(-30px);-o-transform:translateY(-30px);transform:translateY(-30px)}}@-webkit-keyframes fof-shadow{0%,100%{-webkit-transform:scale(1)}50%{-webkit-transform:scale(0.8)}}@-moz-keyframes fof-shadow{0%,100%{-moz-transform:scale(1)}50%{-moz-transform:scale(0.8)}}@keyframes fof-shadow{0%,100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(0.8);-moz-transform:scale(0.8);-ms-transform:scale(0.8);-o-transform:scale(0.8);transform:scale(0.8)}}
+/* Responsive */
+@media only screen and (max-width: 767px) { 
+    .logo-w { display: none }
+    .main-nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .top-nav .item-nav li {
+        padding-bottom: 10px;
+        }
+}
