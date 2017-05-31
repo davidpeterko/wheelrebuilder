@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+        <title>risky style wheel rebuilder</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="wheel rebuilder">
+        <meta name="author" content="David Ko">
+		    <link rel="stylesheet" href="css/kube.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/wheelrebuilder_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/navbar_style.css">
+        <script type="text/javascript" src="./js/wheelrebuilder_controller.js"></script>
+    </head>
+<body>
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+      <div class="container">
+        <header class="group top-nav">
+          <nav class="navbar logo-w navbar-left" >
+            <a class="logo" href="homepage.html">RISKY! style</a>
+          </nav>
+          <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+              <span class="logo">RISKY! style</span>
+          </div>
+            <nav id="navbar-1" class="navbar item-nav navbar-right">
+              <ul>
+                  <li class="active"><a href="homepage.html">Home</a></li>
+                  <li><a href="about.html">About / Contact</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="wheelrebuilder.html">Wheel Rebuilder</a></li>
+                  <li><a href="offsetcalculator.html">Offset Calculator</a></li>
+              </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <h1>WHEEL REBUILDER</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    This calculator was created by David Ko with: Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron<script>document.write(process.versions.electron)</script>.
+
+    <h2>
+      Enter your original wheel sizes:
+    </h2>
+
+    <form name="original">
+      Wheel Diameter:<br>
+      <input type="text" name="diameter" onkeyup="verifyNonEmpty(original)" required><br>
+      Wheel Width:<br>
+      <input type="text" name="width" onkeyup="verifyNonEmpty(original)" required><br>
+      Wheel Offset:<br>
+      <input type="text" name="offset" onkeyup="verifyNonEmpty(original)" required><br>
+      Lip Size:<br>
+      <input type="text" name="lipsize" onkeyup="verifyNonEmpty(original)" required><br>
+      Barrel Size:<br>
+      <input type="text" name="barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
+
+    <h2>
+      Enter your desired lip and barrel size:<br>
+    </h2>
+
+      Desired lip Size:<br>
+      <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty(original)" required><br>
+      Desired barrel Size:<br>
+      <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
+
+      <button id="rebuildButton" type="button" onclick="calculate(original)" disabled>Rebuild</button>
+
+    </form>
+
+    <p>
+      <h2>
+        <span id="newSpecTitle"></span><br>
+      </h2>
+
+      <span id="fullSpec"></span><br>
+
+      <span id="newWidth"></span><br>
+
+      <span id="newOffset"></span><br>
+
+      <span id="newLipsize"></span><br>
+
+      <span id="newBarrelsize"></span><br>
+
+    </p>
+
+    <div class="footer">
+      Miscalculations and bugs report to: <a href="mailto:davidpeterko@gmail.com">davidpeterko@gmail.com</a><br>
+      Share this with your friends if it helped you<br>
+      instagram: <a href="https://www.instagram.com/wutangbrz">@wutangbrz</a><br>
+      &copy; Copyright 2017, WHEEL REBUILDER
+    </div>
+
+</body>
+
+</html>
