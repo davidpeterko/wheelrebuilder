@@ -2,14 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>WHEEL REBUILDER Beta v0.1</title>
-    <link rel="stylesheet" type="text/css" href="./css/wheelrebuilder_style.css">
-    <script type="text/javascript" src="./js/wheelrebuilder_controller.js"></script>
-  </head>
-  <body>
+        <title>risky style wheel rebuilder</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="wheel rebuilder">
+        <meta name="author" content="David Ko">
+		    <link rel="stylesheet" href="css/kube.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/wheelrebuilder_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/navbar_style.css">
+        <script type="text/javascript" src="./js/wheelrebuilder_controller.js"></script>
+    </head>
+<body>
+
+    <!-- nav bar -->
+    <div class="nav-bar">
+      <div class="container">
+        <header class="group top-nav">
+          <nav class="navbar logo-w navbar-left" >
+            <a class="logo" href="homepage.html">RISKY! style</a>
+          </nav>
+          <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+              <span class="logo">RISKY! style</span>
+          </div>
+            <nav id="navbar-1" class="navbar item-nav navbar-right">
+              <ul>
+                  <li class="active"><a href="homepage.html">Home</a></li>
+                  <li><a href="about.html">About / Contact</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="wheelrebuilder.html">Wheel Rebuilder</a></li>
+                  <li><a href="offsetcalculator.html">Offset Calculator</a></li>
+              </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
     <h1>WHEEL REBUILDER</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    This application was created by David Ko with: Node.js <script>document.write(process.versions.node)</script>,
+    This calculator was created by David Ko with: Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron<script>document.write(process.versions.electron)</script>.
 
@@ -37,7 +66,7 @@
       <input type="text" name="desired_lipsize" onkeyup="verifyNonEmpty(original)" required><br>
       Desired barrel Size:<br>
       <input type="text" name="desired_barrelsize" onkeyup="verifyNonEmpty(original)" required><br>
-      
+
       <button id="rebuildButton" type="button" onclick="calculate(original)" disabled>Rebuild</button>
 
     </form>
@@ -56,6 +85,7 @@
       <span id="newLipsize"></span><br>
 
       <span id="newBarrelsize"></span><br>
+
     </p>
 
     <div class="footer">
@@ -65,12 +95,6 @@
       &copy; Copyright 2017, WHEEL REBUILDER
     </div>
 
-  </body>
-
-  <script>
-    // You can also require other files to run in this process
-    require('./js/renderer.js')
-  </script>
-
+</body>
 
 </html>
